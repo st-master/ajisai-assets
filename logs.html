@@ -1317,3 +1317,27 @@ A1: これまでの試行錯誤と解決の歩みを振り返ってみましょ�
   </div>
 </article>
 
+<!-- Auto Generated Card: 2026.0913.01.対話ログカード.md -->
+<article class="log-card">
+  <div class="log-date">2026.0913.01 | AI</div>
+  <h2 class="log-title">対話ログカード</h2>
+  <div class="log-tags"><span class="tag">#AI</span> <span class="tag">#開発メモ</span> <span class="tag">#Git</span> <span class="tag">#Python</span></div>
+  <div class="log-body">
+    <p><strong>Q. tagsプロパティの活用と位置づけ</strong></p>
+<code>tags</code> をフォルダ（<code>category</code>）と同じような分類手段として使うことは可能か？  
+<strong>A:</strong> 可能です。<code>category</code>（単一の物理フォルダ）と <code>tags</code>（複数の横断的テーマ）を組み合わせることで、より柔軟な分類ができます。
+
+---
+
+<p><strong>Q. build.pyによるtagsのHTML自動変換</strong></p>
+<code>build.py</code> が仲立ちして <code><div class="log-tags"><span class="tag">#AI</span>...</div></code> のようなHTMLへ自動変換できるか？  
+<strong>A:</strong> 可能です。<code>parse_front_matter</code> で <code>tags</code> を取得し、<code>generate_tags_html</code> 関数でカプセル型のHTMLタグへ自動変換してカード内へ埋め込むスクリプト拡張案を提示しました。
+
+---
+
+<p><strong>Q. タグのCSSデザイン調整</strong></p>
+CSSで <code>.tag</code> に背景色や角丸をつけたデザインの仕上がりイメージは？  
+<strong>A:</strong> <code>border-radius: 12px</code> で角を丸くし、薄い青緑（<code>#e6f2f2</code>）の背景色を敷くことで、視認性の高い上品なバッジ風デザインを作成できるCSSコードを提示しました。
+  </div>
+</article>
+
