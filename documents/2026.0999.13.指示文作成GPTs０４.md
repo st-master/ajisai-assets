@@ -1,0 +1,36 @@
+# 指示文作成GPTs０４
+---
+## 【1】だれが？
+
+---
+## 【2】何を？
+
+---
+## 【3】どこで？
+
+---
+## 【4】雰囲気は？
+鴨長明の庵の縁側 → 小川のそば → 陰陽道の勾玉が現れ、異次元時空間へ という流れでした…  今回はその流れを受けて… タイムスリップした場所が、大阪うめきた公園の…建築家安藤忠雄氏の設計監修のもとで建てられた『LOHE（ローエ）』という… カフェの中で…一杯のコーヒーを啜っていた…
+→  
+何気なく…コーヒーの向こう側…
+そう…一面ガラス張りのCafeローエの向こうに見下ろすと…
+うめきた公園を行き交う人や自転車…
+行き交う人や車の流れは絶えずして、しかも元の人や車にあらず…
+カフェのスタッフ嬢が
+何気なくスマホで写真を撮った瞬間…
+そのスマホの中へ入り込んでいく…
+
+結局…
+鴨長明の時代…
+鎌倉時代へに引き戻される…
+ふと目が覚めると…
+縁側の小川の流れは…変わらず…なんとも不思議な夢かな？
+
+
+---
+## 画像用０３
+A cinematic and contemplative scene inside LOHE cafe in Umekita Park, Osaka, Japan, a modern architectural space designed under the supervision of architect Tadao Ando. A time traveler sits quietly by a floor-to-ceiling glass wall, holding a cup of freshly brewed coffee. Beyond the large glass windows, people walk through Umekita Park, bicycles pass by, and farther in the distance, cars and buses flow continuously through the busy modern city. The traveler gazes thoughtfully at the endless movement of people and vehicles, reflecting the ancient idea that everything flows and changes. Steam slowly rises from the coffee cup and begins to form a mysterious swirling vortex. The swirling steam becomes an otherworldly portal, gently drawing the traveler toward another dimension of time and space. Elegant concrete architecture, lush green park, urban movement beyond the glass, warm natural light, realistic details, poetic atmosphere, subtle mystical energy, cinematic composition, profound sense of time, change, and eternity.
+
+---
+## 動画用０３
+A cinematic sequence inside LOHE cafe in Umekita Park, Osaka, Japan, a sophisticated modern architectural space designed under the supervision of architect Tadao Ando. A time traveler sits quietly beside a floor-to-ceiling glass wall, slowly sipping a cup of freshly brewed coffee. The camera begins with a close-up of the steaming coffee cup, then gently moves past the traveler and toward the vast glass window. Below, people continuously walk through Umekita Park, bicycles smoothly pass along the pathways, and farther beyond the park, cars and buses flow endlessly through the busy city streets. The camera lingers on this continuous movement, creating a poetic contrast between the ancient world and the constantly changing modern city. The traveler quietly watches the scene and realizes that the endless flow of people and vehicles echoes an ancient reflection on the changing nature of the world. The camera slowly returns to the coffee cup. Steam rises gently, then begins to spiral and twist into a mysterious vortex. The swirling steam grows into an otherworldly portal of time and space, filling the frame with soft mystical light and gradually drawing the traveler into the vortex. Smooth cinematic camera movement, realistic architecture and urban details, warm natural light, subtle ambient motion, poetic and contemplative atmosphere, mysterious transition through time and dimensions.

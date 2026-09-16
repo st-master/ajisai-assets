@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九番ギャラリー</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>🖼️ オールディーズギャラリー</h1>
+    <nav>
+      <a href="/My-Site/index.html">トップへ戻る</a>
+      <a href="/My-Site/images/index.html">画像</a>
+      <a href="/My-Site/audios/index.html">音声</a>
+      <a href="/My-Site/documents/index.html">文書</a>
+      <a href="/My-Site/temporaries/index.html">ひととき</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="audio-gallery" class="gallery-grid">読み込み中...</div>
+    <div id="video-gallery" class="gallery-grid">読み込み中...</div>
+  </main>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadGallery("videos", "video-gallery");
+    });
+  </script>
+</body>
+</html>

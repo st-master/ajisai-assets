@@ -1,0 +1,92 @@
+/* 全体スタイル */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ナビゲーションメニュー */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0366d6;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #0366d6;
+  color: #fff;
+}
+
+/* ギャラリーのグリッド配置 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* カード型アイテム */
+.gallery-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card img, 
+.gallery-card video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #000;
+}
+
+.gallery-card audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card-info {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  word-break: break-all;
+  color: #444;
+}
+
+/* Q. と A: を含むテキストブロックの改行・間隔コントロール */
+.card-content, .log-card-body {
+    /* \n (改行コード) をそのままブラウザ上で改行として表示させる */
+    white-space: pre-wrap; 
+}
+
+/* もし Q と A がそれぞれ独立した要素（pタグやh3タグ等）になっている場合の余白調整 */
+.card-content p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}

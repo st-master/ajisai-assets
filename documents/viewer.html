@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文書ビューア</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- MarkdownをHTMLに変換するライブラリ -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .markdown-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      line-height: 1.6;
+    }
+    .markdown-body h1, .markdown-body h2 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    .markdown-body pre {
+      background: #f6f8fa;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📄 文書詳細</h1>
+    <nav>
+      <a href="./">文書ギャラリーへ戻る</a>
+      <a href="../">トップへ戻る</a>
+    </nav>
+  </header>
+
+  <main style="padding: 20px;">
+    <div id="content" class="markdown-body">読み込み中...</div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      // URLのパラメータからファイル名を取得 (?file=filename.md)
+      const urlParams = new URLSearchParams(window.location.search);
+      const fileName = urlParams.get('file');
+
+      if (!fileName) {
+        document.getElementById("content").innerHTML = "<p>ファイルが指定されていません。</p>";
+        return;
+      }
+
+      try {
+        // 指定されたMarkdownファイルを取得
+        const response = await fetch(`./${fileName}`);
+        if (!response.ok) throw new Error("ファイルの取得に失敗しました");
+        
+        const markdownText = await response.text();
+        // MarkedライブラリでHTMLに変換して表示
+        document.getElementById("content").innerHTML = marked.parse(markdownText);
+      } catch (error) {
+        document.getElementById("content").innerHTML = "<p>文書の読み込みに失敗しました。</p>";
+      }
+    });
+  </script>
+</body>
+</html>

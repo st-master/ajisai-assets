@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音声ギャラリー</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>🖼️ 音声ギャラリー</h1>
+    <nav>
+      <a href="/My-Site/">トップへ戻る</a>
+      <a href="/My-Site/videos/">動画</a>
+      <a href="/My-Site/images/">画像</a>
+      <a href="/My-Site/documents/">文書</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="audio-gallery" class="gallery-grid">読み込み中...</div>
+  </main>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadGallery("audios", "audio-gallery");
+    });
+  </script>
+</body>
+</html>
