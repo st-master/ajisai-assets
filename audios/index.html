@@ -3,29 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>音声ギャラリー</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <title>音声アーカイブ - マイポータル</title>
+  <link rel="stylesheet" href="{{THEME_CSS}}">
 </head>
 <body>
-  <header>
-    <h1>🖼️ 音声ギャラリー</h1>
-    <nav>
-      <a href="../">トップへ戻る</a>
-      <a href="../videos/">動画</a>
-      <a href="../images/">画像</a>
-      <a href="../documents/">文書</a>
-    </nav>
+  <!-- 共通ヘッダー・ポータルナビゲーション -->
+  <header class="portal-header">
+    <h1 class="portal-title">マイポータルログ</h1>
+    
+    <!-- NAV-BUILD-START -->
+<nav>
+  <a href="../">資産トップ</a>
+  <a href="../assets/">Assets </a>
+  <a href="../audios/">音声</a>
+  <a href="../documents/">文書</a>
+  <a href="../images/">画像</a>
+  <a href="../temporaries/">Temporaries </a>
+  <a href="../videos/">動画</a>
+  <a href="../../">サイト本館へ</a>
+</nav>
+<!-- NAV-BUILD-END -->
   </header>
 
-  <main>
-    <div id="audio-gallery" class="gallery-grid">読み込み中...</div>
+  <!-- メインコンテンツ領域 -->
+  <main class="portal-main">
+    <!-- 各セクションのメインタイトル（例: 🖼️ 画像ギャラリー） -->
+    <section class="section-title-area">
+      <h2 class="section-heading">🎵 音声アーカイブ</h2>
+    </section>
+
+    <!-- ギャラリーカードグリッド（降順ソートされたメディアが並びます） -->
+    <!-- GALLERY-START -->
+<div class="gallery-grid">
+</div>
+<!-- GALLERY-END -->
   </main>
 
-  <script src="../assets/script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      loadGallery("audios", "audio-gallery");
-    });
-  </script>
+  <!-- 共通フッター -->
+  <footer class="portal-footer">
+    <p>&copy; 2026 マイポータルログ - Assets Manager</p>
+  </footer>
 </body>
 </html>

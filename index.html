@@ -3,82 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Site - ポータル</title>
-  <link rel="stylesheet" href="./assets/style.css">
+  <title>資産管理ポータル - マイポータル</title>
+  <link rel="stylesheet" href="{{THEME_CSS}}">
 </head>
 <body>
-  <header>
-    <h1>マイポータルログ</h1>
-    <nav>
-      <a href="/logs.html">制作ログ</a>
-      <a href="/documents/">文書 (Documents)</a>
-      <a href="/images/">画像 (Images)</a>
-      <a href="/videos/">動画 (Videos)</a>
-      <a href="/audios/">音声 (Audios)</a>
-    </nav>
+  <!-- 共通ヘッダー・ポータルナビゲーション -->
+  <header class="portal-header">
+    <h1 class="portal-title">マイポータルログ</h1>
+    
+    <!-- NAV-BUILD-START -->
+<nav>
+  <a href="./">資産トップ</a>
+  <a href="./assets/">Assets </a>
+  <a href="./audios/">音声</a>
+  <a href="./documents/">文書</a>
+  <a href="./images/">画像</a>
+  <a href="./temporaries/">Temporaries </a>
+  <a href="./videos/">動画</a>
+  <a href="../">サイト本館へ</a>
+</nav>
+<!-- NAV-BUILD-END -->
   </header>
 
-  <main style="text-align: center; margin-top: 50px;">
-    <h2>最近の目玉（Topic-Vision）</h2>
+  <!-- メインコンテンツ領域 -->
+  <main class="portal-main">
+    <!-- 各セクションのメインタイトル（例: 🖼️ 画像ギャラリー） -->
+    <section class="section-title-area">
+      <h2 class="section-heading">🏛️ 資産管理ポータル</h2>
+    </section>
+
+    <!-- ギャラリーカードグリッド（降順ソートされたメディアが並びます） -->
+    <!-- GALLERY-START -->
+<div class="gallery-grid">
+
+<article class="media-card portal-card">
+  <div class="card-body">
+    <h3>📁 Assets ギャラリー</h3>
+    <a href="./assets/" class="portal-btn">ギャラリーを開く →</a>
+  </div>
+</article>
+
+<article class="media-card portal-card">
+  <div class="card-body">
+    <h3>🎵 音声アーカイブ</h3>
+    <a href="./audios/" class="portal-btn">ギャラリーを開く →</a>
+  </div>
+</article>
+
+<article class="media-card portal-card">
+  <div class="card-body">
+    <h3>📄 文書アーカイブ</h3>
+    <a href="./documents/" class="portal-btn">ギャラリーを開く →</a>
+  </div>
+</article>
+
+<article class="media-card portal-card">
+  <div class="card-body">
+    <h3>🖼️ 画像ギャラリー</h3>
+    <a href="./images/" class="portal-btn">ギャラリーを開く →</a>
+  </div>
+</article>
+
+<article class="media-card portal-card">
+  <div class="card-body">
+    <h3>📁 Temporaries ギャラリー</h3>
+    <a href="./temporaries/" class="portal-btn">ギャラリーを開く →</a>
+  </div>
+</article>
+
+<article class="media-card portal-card">
+  <div class="card-body">
+    <h3>🎥 動画ライブラリ</h3>
+    <a href="./videos/" class="portal-btn">ギャラリーを開く →</a>
+  </div>
+</article>
+</div>
+<!-- GALLERY-END -->
   </main>
 
-  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;">
-    <!-- playsinline と muted を指定することでスマホ等の自動再生制限を回避します -->
-    <video id="temp-video" controls width="640" autoplay loop muted playsinline controls style="max-width: 100%;">
-      <source src="./temporaries/news.mp4" type="video/mp4">
-      お使いのブラウザは動画タグに対応していません…
-    </video>
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;">
-    <!-- playsinline と muted を指定することでスマホ等の自動再生制限を回避します -->
-    <video id="temp-video" controls width="640" autoplay loop muted playsinline style="max-width: 100%;">
-      <source src="./temporaries/news.oldies.mp4" type="video/mp4">
-      お使いのブラウザは動画タグに対応していません…
-    </video>
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;">
-    <!-- playsinline と muted を指定することでスマホ等の自動再生制限を回避します -->
-    <video id="temp-video" controls width="640" autoplay loop muted playsinline style="max-width: 100%;">
-      <source src="./temporaries/news.old.mp4" type="video/mp4">
-      お使いのブラウザは動画タグに対応していません…
-    </video>
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 20px 0;">
-    <!-- playsinline と muted を指定することでスマホ等の自動再生制限を回避します -->
-    <video id="temp-video" controls width="640" autoplay loop muted playsinline style="max-width: 100%;">
-      <source src="./temporaries/news.older.mp4" type="video/mp4">
-      お使いのブラウザは動画タグに対応していません…
-    </video>
-  </div>
-  
-  <script>
-    async function loadFirstVideo() {
-      const folderPath = './temporaries/';
-      try {
-        const response = await fetch(folderPath);
-        const text = await response.text();
-        
-        // HTML文字列からリンクを取得して動画ファイルを抽出
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-        const links = Array.from(doc.querySelectorAll('a'));
-        
-        // 対応する拡張子のファイルを検出
-        const videoLink = links.find(link => 
-          /\.(mp4|webm|ogg)$/i.test(link.getAttribute('href'))
-        );
-  
-        if (videoLink) {
-          const videoElement = document.getElementById('temp-video');
-          const videoUrl = new URL(videoLink.getAttribute('href'), new URL(folderPath, window.location.href)).href;
-          videoElement.src = videoUrl;
-        }
-      } catch (error) {
-        console.error('動画の読み込みに失敗しました:', error);
-      }
-    }
-  
-    loadFirstVideo();
-  </script>
+  <!-- 共通フッター -->
+  <footer class="portal-footer">
+    <p>&copy; 2026 マイポータルログ - Assets Manager</p>
+  </footer>
 </body>
 </html>
