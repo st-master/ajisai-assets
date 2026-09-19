@@ -1,0 +1,35 @@
+# ==========================================
+# 1. データの定義 (Meta & Node Data)
+# ==========================================
+node:
+  title: "画像ポータル"
+  icon: "🖼️"
+
+# ==========================================
+# 2. 金型の定義 (Screen Template)
+# ==========================================
+template: |
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" href="{{CSS_PATH}}">
+  </head>
+  <body>
+    <header>
+      <h1>{{ICON}} {{TITLE}}</h1>
+    </header>
+
+    <main>
+      <div class="gallery-grid">
+        {{CARDS}}
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 マイポータルログ - Assets Manager</p>
+    </footer>
+  </body>
+  </html>
