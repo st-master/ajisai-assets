@@ -3,63 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>資産管理ポータル - マイポータル</title>
-  <link rel="stylesheet" href="{{THEME_CSS}}">
+  <title>{{ title }}</title>
+  <!-- Raw URL を使用してローカル/GitHub Pages 両対応にします -->
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/st-master/Design/main/style.css">
 </head>
 <body>
-  <!-- 共通ヘッダー・ポータルナビゲーション -->
-  <header class="portal-header">
-    <h1 class="portal-title">マイポータルログ</h1>
-    
-    <!-- NAV-BUILD-START -->
-<nav>
-  <a href="./">資産トップ</a>
-  <a href="./audios/">音声</a>
-  <a href="./images/">画像</a>
-  <a href="./videos/">動画</a>
-  <a href="../">サイト本館へ</a>
-</nav>
-<!-- NAV-BUILD-END -->
+  <header>
+    <h1>{{ title }}</h1>
+    <nav>
+      <a href="https://st-master.github.io/assets/">ポータルTop</a>
+      <a href="https://st-master.github.io/assets/audios/">音声</a>
+      <a href="https://st-master.github.io/assets/documents/">文書</a>
+      <a href="https://st-master.github.io/assets/images/">画像</a>
+      <a href="https://st-master.github.io/assets/skeleton_builder/">スケルトン</a>
+      <a href="https://st-master.github.io/assets/videos/">動画</a>
+    </nav>
   </header>
-
-  <!-- メインコンテンツ領域 -->
-  <main class="portal-main">
-    <!-- 各セクションのメインタイトル（例: 🖼️ 画像ギャラリー） -->
-    <section class="section-title-area">
-      <h2 class="section-heading">🏛️ 資産管理ポータル</h2>
-    </section>
-
-    <!-- ギャラリーカードグリッド（降順ソートされたメディアが並びます） -->
-    <!-- GALLERY-START -->
-<div class="gallery-grid">
-
-<article class="media-card portal-card">
-  <div class="card-body">
-    <h3>🎵 音声アーカイブ</h3>
-    <a href="./audios/" class="portal-btn">ギャラリーを開く →</a>
-  </div>
-</article>
-
-<article class="media-card portal-card">
-  <div class="card-body">
-    <h3>🖼️ 画像ギャラリー</h3>
-    <a href="./images/" class="portal-btn">ギャラリーを開く →</a>
-  </div>
-</article>
-
-<article class="media-card portal-card">
-  <div class="card-body">
-    <h3>🎥 動画ライブラリ</h3>
-    <a href="./videos/" class="portal-btn">ギャラリーを開く →</a>
-  </div>
-</article>
-</div>
-<!-- GALLERY-END -->
+  <main>
+    <div class="gallery-grid">
+      {{ content }}
+    </div>
   </main>
-
-  <!-- 共通フッター -->
-  <footer class="portal-footer">
+  <footer>
     <p>&copy; 2026 マイポータルログ - Assets Manager</p>
   </footer>
 </body>
 </html>
+
+nodes:
+- name: "🎵 音声ポータル"
+  path: "audios/"
+- name: "📄 文書ポータル"
+  path: "documents/"
+- name: "🖼️ 画像ポータル"
+  path: "images/"
+- name: "🏗️ スケルトンポータル"
+  path: "skeleton_builder/"
+- name: "🎬 動画ポータル"
+  path: "videos/"
