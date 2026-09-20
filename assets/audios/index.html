@@ -3,41 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <!-- Raw URL を使用してローカル/GitHub Pages 両対応にします -->
+  <title>デザインポータル</title>
+  <!-- GitHub RAWデータ参照 ( Design/style.css ) -->
   <link rel="stylesheet" href="https://raw.githubusercontent.com/st-master/Design/main/style.css">
 </head>
 <body>
   <header>
-    <h1>{{ title }}</h1>
-    <nav>
-      <a href="https://st-master.github.io/assets/">ポータルTop</a>
-      <a href="https://st-master.github.io/assets/audios/">音声</a>
-      <a href="https://st-master.github.io/assets/documents/">文書</a>
-      <a href="https://st-master.github.io/assets/images/">画像</a>
-      <a href="https://st-master.github.io/assets/skeleton_builder/">スケルトン</a>
-      <a href="https://st-master.github.io/assets/videos/">動画</a>
-    </nav>
+    <h1>🎨 デザインポータル</h1>
   </header>
+
   <main>
     <div class="gallery-grid">
-      {{ content }}
+      
     </div>
   </main>
+
   <footer>
-    <p>&copy; 2026 マイポータルログ - Assets Manager</p>
+    <p>© 2026 マイポータルログ - Assets Manager</p>
   </footer>
 </body>
 </html>
-
-nodes:
-- name: "🎵 音声ポータル"
-  path: "audios/"
-- name: "📄 文書ポータル"
-  path: "documents/"
-- name: "🖼️ 画像ポータル"
-  path: "images/"
-- name: "🏗️ スケルトンポータル"
-  path: "skeleton_builder/"
-- name: "🎬 動画ポータル"
-  path: "videos/"
