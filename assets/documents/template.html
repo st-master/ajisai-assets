@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} - マイポータル</title>
+  <link rel="stylesheet" href="{{THEME_CSS}}">
+</head>
+<body>
+  <!-- 共通ヘッダー・ポータルナビゲーション -->
+  <header class="portal-header">
+    <h1 class="portal-title">マイポータルログ</h1>
+    
+    <!-- NAV-BUILD-START -->
+    <!-- python build.py によってポータブルなナビゲーションが自動挿入されます -->
+    <!-- NAV-BUILD-END -->
+  </header>
+
+  <!-- メインコンテンツ領域 -->
+  <main class="portal-main">
+    <!-- 各セクションのメインタイトル（例: 🖼️ 画像ギャラリー） -->
+    <section class="section-title-area">
+      <h2 class="section-heading">{{HEADER}}</h2>
+    </section>
+
+    <!-- ギャラリーカードグリッド（降順ソートされたメディアが並びます） -->
+    <!-- GALLERY-START -->
+    <!-- python build.py によってメディアカード群が具現化されます -->
+    <!-- GALLERY-END -->
+  </main>
+
+  <!-- 共通フッター -->
+  <footer class="portal-footer">
+    <p>&copy; 2026 マイポータルログ - Assets Manager</p>
+  </footer>
+</body>
+</html>
